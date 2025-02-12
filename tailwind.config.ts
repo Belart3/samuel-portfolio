@@ -11,7 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        B300: "#666666",
+        B400: "#333333",
+        B50: "#E6E6E6",
+        B200: "#999999",
       },
+      backgroundImage: {
+      }
     },
   },
   plugins: [],
