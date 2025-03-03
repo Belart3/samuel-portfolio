@@ -14,10 +14,10 @@ type Props = {
 function SectionTitle({fraction, title}: Props) {
   return (
     <div className="flex items-center justify-between w-full pt-5">
-      <p className={`${base_neue.className} text-B200 text-base capitalize`}>
+      <p className={`${base_neue.className} text-B200 text-[12px]/[12px]  tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize`}>
           {fraction}
       </p>
-      <p className={`${base_neue.className} text-B200 text-base capitalize`}>
+      <p className={`${base_neue.className} text-B200 text-[12px]/[12px]  tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize`}>
           {title}
       </p>
     </div>

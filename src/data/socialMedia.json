@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "media": "Instagram",
+        "url": "",
+        "image": "./assets/images/instagram.svg"
+    },
+    {
+        "id": 2,
+        "media": "X",
+        "url": "",
+        "image": "./assets/images/X.svg"
+    },
+    {
+        "id": 3,
+        "media": "LinkedIn",
+        "url": "",
+        "image": "./assets/images/linkedin.svg"
+    },
+    {
+        "id": 4,
+        "media": "Behance",
+        "url": "",
+        "image": "./assets/images/behance.svg"
+    }
+]

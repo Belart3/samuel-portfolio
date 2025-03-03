@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "category": "social media ads",
+        "image": "/assets/images/ads/social-media-ad-1.png"
+    },
+    {
+        "id": 2,
+        "category": "social media ads",
+        "image": "/assets/images/ads/social-media-ad-2.png"
+    },
+    {
+        "id": 3,
+        "category": "social media ads",
+        "image": "/assets/images/ads/social-media-ad-3.png"
+    },
+    {
+        "id": 4,
+        "category": "social media ads",
+        "image": "/assets/images/ads/social-media-ad-4.png"
+    },
+    {
+        "id": 5,
+        "category": "social media ads",
+        "image": "/assets/images/ads/social-media-ad-5.png"
+    },
+    {
+        "id": 6,
+        "category": "social media ads",
+        "image": "/assets/images/ads/social-media-ad-6.png"
+    },
+    {
+        "id": 7,
+        "category": "web designs",
+        "image": "/assets/images/ads/web-design-1.png"
+    },
+    {
+        "id": 8,
+        "category": "web designs",
+        "image": "/assets/images/ads/web-design-2.png"
+    },
+    {
+        "id": 9,
+        "category": "web designs",
+        "image": "/assets/images/ads/web-design-3.png"
+    },
+    {
+        "id": 10,
+        "category": "web designs",
+        "image": "/assets/images/ads/web-design-4.png"
+    },
+    {
+        "id": 11,
+        "category": "pitch decks",
+        "image": "/assets/images/ads/pitch-decks-1.png"
+    },
+    {
+        "id": 12,
+        "category": "pitch decks",
+        "image": "/assets/images/ads/pitch-decks-2.png"
+    },
+    {
+        "id": 13,
+        "category": "white papers",
+        "image": "/assets/images/ads/white-papers-1.png"
+    },
+    {
+        "id": 12,
+        "category": "white papers",
+        "image": "/assets/images/ads/white-papers-2.png"
+    }
+]

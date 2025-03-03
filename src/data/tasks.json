@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "UI/UX Design",
+        "paragraph": "Crafting user-centric designs that balance aesthetics and usability. Perfect for SaaS platforms, fintech apps, Web3 products, and more."
+    },
+    {
+        "id": 2,
+        "title": "Website Design & Development",
+        "paragraph": "Designing conversion-focused, responsive websites tailored to industries like education, real estate, crypto, and portfolios."
+    },
+    {
+        "id": 3,
+        "title": "Branding and Visual Design",
+        "paragraph": "Creating impactful visuals for social media ads and campaigns that resonate with your audience."
+    },
+    {
+        "id": 4,
+        "title": "Presentation & Pitch Deck Design",
+        "paragraph": "Designing pitch decks, crypto whitepapers that leave a lasting impression on investors, stakeholders, and partners."
+    }
+]
