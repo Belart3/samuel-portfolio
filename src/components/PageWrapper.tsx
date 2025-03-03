@@ -5,7 +5,7 @@ interface WrapperProps {
   className?: string;
 }
 
-const PageWrapper: React.FC<WrapperProps> = ({ children, className = "" }) => {
+const PageWrapper: React.FC<WrapperProps> = ({ children, className = "f" }) => {
   return (
     <div className=" mx-5 lg:mx-10 max-w-screen-2xl 2xl:mx-auto 2xl:px-10  relative">
         {children}
