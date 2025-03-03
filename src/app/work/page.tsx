@@ -12,7 +12,7 @@ import work from '@/data/work.json'
 
 const neue_power = localFont({
     src: "../../../public/assets/fonts/NeuePowerTrial/NeuePowerTrial-Regular.ttf",
-    display: "swap",
+    display: "swap" ,
 });
 
 type Props = {}
