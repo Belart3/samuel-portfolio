@@ -20,7 +20,7 @@ import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import BtnTransArr from "@/components/BtnTransArr";
 
-export const neue_power_regular = localFont({
+const neue_power_regular = localFont({
     src: "../../public/assets/fonts/NeuePowerTrial/NeuePowerTrial-Regular.ttf",
     display: "swap",
 });

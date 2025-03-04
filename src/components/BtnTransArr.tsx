@@ -1,6 +1,11 @@
-import { neue_power_regular } from '@/app/page'
 import Image from 'next/image'
 import React from 'react'
+import localFont from 'next/font/local';
+
+const neue_power_regular = localFont({
+    src: "../../public/assets/fonts/NeuePowerTrial/NeuePowerTrial-Regular.ttf",
+    display: "swap",
+});
 
 type Props = {
     content: string
