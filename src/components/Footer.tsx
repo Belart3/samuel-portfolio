@@ -62,8 +62,8 @@ const Footer = (props: Props) => {
             </div>
             <div className="
                 bg-B75 
-                h-[500px]  w-full
-                lg:w-1/2 lg:h-full
+                h-[300px] md:h-[500px] lg:h-[600px]  w-full
+                lg:w-1/2 
             "
             ></div>
         </div>

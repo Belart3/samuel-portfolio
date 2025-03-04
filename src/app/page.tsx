@@ -89,9 +89,9 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-[1%]">
-            <div className="h-[800px] lg:h-[600px] w-full lg:w-[32%] bg-B50"></div>
-            <div className="h-[800px] lg:h-[600px] w-full lg:w-[32%] bg-B50"></div>
-            <div className="h-[800px] lg:h-[600px] w-full lg:w-[32%] bg-B50"></div>
+            <div className="h-[400px] md:h-[800px] lg:h-[600px] w-full lg:w-[32%] bg-B50"></div>
+            <div className="h-[400px] md:h-[800px] lg:h-[600px] w-full lg:w-[32%] bg-B50"></div>
+            <div className="h-[400px] md:h-[800px] lg:h-[600px] w-full lg:w-[32%] bg-B50"></div>
           </div>
           <div className="block md:hidden">
             <BtnTransArr content={"view all my work"} />
@@ -112,7 +112,7 @@ export default function Home() {
                 </p>
                 <BtnTransArr content="learn more about me"/>
               </div>
-              <div className="bg-[url('/assets/images/my-image.png')] h-[900px] lg:h-full w-full lg:w-1/2 lg:max-w-[50%] bg-no-repeat bg-cover bg-center order-2 lg:order-3"></div>
+              <div className="bg-[url('/assets/images/my-image.png')] h-[450px] md:h-[900px] lg:h-full w-full lg:w-1/2 lg:max-w-[50%] bg-no-repeat bg-cover bg-center order-2 lg:order-3"></div>
               <div className="flex flex-row flex-wrap gap-x-[30px] gap-y-3 order-3 lg:order-2 w-full lg:w-1/2 self-end">
                 {
                   titles.map((title) => (
@@ -134,7 +134,7 @@ export default function Home() {
             {
               tasks.map((task) => (
                 <div className="w-[49%] flex flex-col items-start gap-8" key={task.id} >
-                  <div className="h-[400px] w-full bg-B50"></div>
+                  <div className="h-[300px] md:h-[400px] lg:h-[450px] w-full bg-B50"></div>
                   <div className="flex flex-col items-start gap-4">
                     <h3 className={`${neue_power_regular.className} tracking-[0.8px] text-[20px]/[24px] font-medium`}>{task.title}</h3>
                     <p className={`${base_neue.className} text-[16px]/[24px] font-normal tracking-[0.64px] text-B200`}>

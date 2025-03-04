@@ -13,7 +13,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <nav className='py-4 flex items-center justify-between sticky top-0 bg-black z-50 w-full'>
+    <nav className='py-4 flex items-center justify-between sticky top-0 z-50 w-full'>
         <div className='flex items-center justify-center w-48 h-7'>
           <Link href={'/'}>
             <Image  src='./assets/images/logo.svg' width={100} height={50} alt='samuel belawu' className='w-full'/>
