@@ -7,7 +7,7 @@ interface WrapperProps {
 
 const SectionWrapper: React.FC<WrapperProps> = ({ children, className = "" }) => {
   return (
-    <div className={`flex flex-col gap-16 mb-[168px] ${className}`}>
+    <div className={`flex flex-col gap-12 md:gap-16 mb-[104px] md:mb-[168px] ${className}`}>
       {children}
     </div>
   );

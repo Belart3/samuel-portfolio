@@ -19,26 +19,23 @@ import { FreeMode } from 'swiper/modules';
 import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import BtnTransArr from "@/components/BtnTransArr";
+import { Geist } from "next/font/google";
 
-const neue_power_regular = localFont({
+export const neue_power_regular = localFont({
     src: "../../public/assets/fonts/NeuePowerTrial/NeuePowerTrial-Regular.ttf",
     display: "swap",
 });
-
-const base_neue = localFont({
-    src: "../../public/assets/fonts/base_neue/BaseNeueTrial-Regular.ttf",
-    display: "swap",
-});
+const geist = Geist({ subsets: ["latin"] });
 
 export default function Home() {
   const [swiperActive, setSwipeActive] = useState(false);
   return (
     <PageWrapper >
-      <header className="h-dvh md:max-h-[845px] relative flex flex-col items-center justify-between pt-8">
-        <Navbar />
+      <Navbar />
+      <header className="h-dvh md:max-h-[845px] relative flex flex-col items-center justify-between pt-8 mt-[100px]">
           {/* fixed page fraction */}
         <div className="flex items-center justify-center gap-1 w-fit absolute top-[170px] left-0">
-          <p className={`${base_neue.className} text-B200 text-base capitalize`}>
+          <p className={`${geist.className} text-B200 text-base capitalize tracking-[0px]`}>
             01/04 - Scroll
           </p>
           <Image src="./assets/images/arrow-down-grey.svg" height={24} width={24} alt="arrow down"/>
@@ -64,7 +61,7 @@ export default function Home() {
           </motion.h2>
         </div>
         <div className="w-full md:w-3/5 mx-auto">
-          <p className={`${base_neue.className} text-B50 text-end text-lg/[27px] font-normal`}>
+          <p className={`${geist.className} text-B50 text-end text-lg/[27px] font-normal tracking-[0px]`}>
             Turn your wild ideas into pixel-perfect realities. Whether it’s SaaS platforms, Web3 apps, or a landing page that actually converts, I make sure your users stay happy (and your bounce rates stay low).
           </p>
         </div>
@@ -80,8 +77,8 @@ export default function Home() {
         {/* section 02/04 */}
         <SectionWrapper className="" >
           <SectionTitle title="My Greatest Hits (No Auto-Tune Required)" fraction="02/04" />
-          <div className="flex flex-col lg:flex-row items-start justify-center gap-4 w-full lg:w-4/5 max-w[]">
-            <p className={`${neue_power_regular.className} text-[28px]/[28px] lg:text-[32px]/[38px] tracking-[1.12px] md:tracking-[1.28px] font-medium`}>
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-4 w-full max-w[]">
+            <p className={`${neue_power_regular.className} text-[28px]/[28px] lg:text-[32px]/[38px] tracking-[1.12px] md:tracking-[1.28px] font-medium text-white w-full xl:w-[75%]`}>
               Here’s where I let my work do the talking (because bragging isn’t my thing—okay, maybe a little). Go ahead, take a look—you might just find your next favorite designer.
             </p>
             <div className="hidden md:block">
@@ -107,7 +104,7 @@ export default function Home() {
                 flex flex-col justify-between items-start w-[80%]
                 lg:w-[40%] gap-8 order-1"
               >
-                <p className={`${base_neue.className} text-B50 text-start text-lg/[27px] font-normal`}>
+                <p className={`${geist.className} text-B50 text-start text-lg/[27px] font-normal tracking-[0px]`}>
                   Hi, I’m Samuel Belawu, a UI/UX designer crafting websites and designs that don’t just look good—they work. When I’m not designing, I’m either chasing wins in Apex, scoring goals in eFootball, lifting weights at the gym.
                 </p>
                 <BtnTransArr content="learn more about me"/>
@@ -116,7 +113,7 @@ export default function Home() {
               <div className="flex flex-row flex-wrap gap-x-[30px] gap-y-3 order-3 lg:order-2 w-full lg:w-1/2 self-end">
                 {
                   titles.map((title) => (
-                    <p className={`${neue_power_regular.className} capitalize text-[32px]/[38px] tracking-[1.28px] relative before:h-[6px] before:w-[6px] before:bg-B400 before:absolute before:rounded-full before:top-1/2 before:left-[-12px] `} key={title.id}>
+                    <p className={`${neue_power_regular.className} capitalize text-[32px]/[38px] tracking-[1.28px] relative before:h-[6px] before:w-[6px] before:bg-B400 before:absolute before:rounded-full before:top-1/2 before:left-[-12px] text-white`} key={title.id}>
                       {title.title}
                     </p>
                   ))
@@ -133,11 +130,11 @@ export default function Home() {
           <div className="flex flex-row flex-wrap gap-y-5 justify-between lg:hidden">
             {
               tasks.map((task) => (
-                <div className="w-[49%] flex flex-col items-start gap-8" key={task.id} >
+                <div className="w-full md:w-[49%] flex flex-col items-start gap-8" key={task.id} >
                   <div className="h-[300px] md:h-[400px] lg:h-[450px] w-full bg-B50"></div>
                   <div className="flex flex-col items-start gap-4">
-                    <h3 className={`${neue_power_regular.className} tracking-[0.8px] text-[20px]/[24px] font-medium`}>{task.title}</h3>
-                    <p className={`${base_neue.className} text-[16px]/[24px] font-normal tracking-[0.64px] text-B200`}>
+                    <h3 className={`${neue_power_regular.className} tracking-[0.8px] text-[20px]/[24px] font-medium text-white`}>{task.title}</h3>
+                    <p className={`${geist.className} text-[16px]/[24px] font-normal tracking-[0px] text-B200`}>
                       {task.paragraph}
                     </p>
                   </div>
@@ -162,7 +159,7 @@ export default function Home() {
                   <div className="h-[450px] bg-B50"></div>
                   <div className="flex flex-col items-start gap-4 mt-3">
                     <h3 className={`${neue_power_regular.className} tracking-[0.8px]`}>{task.title}</h3>
-                    <p className={`${base_neue.className} tracking-[0.64px] text-B200`}>
+                    <p className={`${geist.className} tracking-[0px] text-B200`}>
                       {task.paragraph}
                     </p>
                   </div>

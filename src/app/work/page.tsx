@@ -1,6 +1,6 @@
 "use client"
-import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import PageWrapper from '@/components/PageWrapper'
 import SectionTitle from '@/components/SectionTitle'
 import SectionWrapper from '@/components/SectionWrapper'
@@ -28,10 +28,10 @@ const page = (props: Props) => {
   return (
     <PageWrapper>
         <Navbar />
-        <main>
+        <main className='mt-[100px]'>
             <SectionWrapper >
                 <SectionTitle fraction={'02/04'} title={'work'} />
-                <h1 className={`${neue_power.className} text-[32px]/[32px] tracking-[1.28px] md:text-[56px]/[56px] md:tracking-[2.24px] font-medium`}>
+                <h1 className={`${neue_power.className} text-[32px]/[32px] tracking-[1.28px] md:text-[56px]/[56px] md:tracking-[2.24px] font-medium text-white`}>
                     See What I’ve Been Up To <br /> (Besides Playing Apex).
                 </h1>
                 <div className="flex flex-col gap-8 md:gap-10">
