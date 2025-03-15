@@ -1,3 +1,4 @@
+"use client"
 import Navbar from '@/components/Navbar'
 import PageWrapper from '@/components/PageWrapper'
 import React from 'react'
@@ -16,8 +17,8 @@ const neue_power = localFont({
 const About = () => {
   return (
     <PageWrapper>
-      {/* <Navbar /> */}
-      <header className='flex flex-col mb-[104px] gap-12 md:gap-16'>
+      <Navbar />
+      <header className='flex flex-col mb-[104px] gap-12 md:gap-16 mt-[100px]'>
         <SectionTitle fraction='03/04' title='about' />
         <div className="flex flex-col gap-8 md:gap-10">
           <h1 className={`${neue_power.className} text-[32px]/[32px] tracking-[1.28px] font-medium text-white`}>
@@ -59,7 +60,7 @@ const About = () => {
           }
         </div>
       </SectionWrapper>
-      {/* <Footer /> */}
+      <Footer />
     </PageWrapper>
   )
 }
