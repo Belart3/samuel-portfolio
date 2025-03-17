@@ -1,10 +1,7 @@
 import React from 'react'
-import localFont from "next/font/local";
+import { Geist } from 'next/font/google';
 
-const base_neue = localFont({
-    src: "../../public/assets/fonts/base_neue/BaseNeueTrial-Regular.ttf",
-    display: "swap",
-});
+const geist = Geist({ subsets: ["latin"] });
 
 type Props = {
     fraction: string,
@@ -13,11 +10,14 @@ type Props = {
 
 function SectionTitle({fraction, title}: Props) {
   return (
-    <div className="flex items-center justify-between w-full pt-5">
-      <p className={`${base_neue.className} text-B200 text-[12px]/[12px]  tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize`}>
-          {fraction}
-      </p>
-      <p className={`${base_neue.className} text-B200 text-[12px]/[12px]  tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize`}>
+    <div className="flex items-center justify-between w-full pt-5 border-t border-[#333333]">
+      {
+        fraction &&
+        <p className={`${geist.className} text-B200 text-[12px]/[12px] tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize`}>
+        {fraction}
+        </p>
+      }
+      <p className={`${geist.className} text-B200 text-[12px]/[12px] tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize`}>
           {title}
       </p>
     </div>

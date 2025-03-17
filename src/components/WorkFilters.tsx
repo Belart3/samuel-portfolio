@@ -20,7 +20,7 @@ function WorkFilters({filter, isActive, setWorkFilter, selectedCategory, setSele
 
   return (
     <motion.button 
-      whileTap={{rotate: 10}}
+      whileTap={{scale: 0.75}}
       className={
       ` ${neue_power.className} px-5 py-[14px] md:py-4 flex gap-2 items-center justify-center border rounded-[32px] border-B300 capitalize font-bold text-[16px]/[16px] tracking-[0.64px] text-white w-max min-w-max hover:bg-B300 transition ease-in-out duration-100 ${isActive ? "bg-B300 border border-white" : " bg-transparent "}`
       }

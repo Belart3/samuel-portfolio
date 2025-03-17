@@ -1,9 +1,10 @@
+"use client"
 import React from 'react'
 import localFont from "next/font/local";
 import BtnWhiteArr from './BtnWhiteArr';
 import socialmedia from '@/data/socialMedia.json'
 import Image from 'next/image';
-
+import { Geist } from 'next/font/google';
 import { motion } from "framer-motion";
 import BtnTrans from './BtnTrans';
 
@@ -12,10 +13,7 @@ const neue_power_regular = localFont({
     display: "swap",
 });
 
-const base_neue = localFont({
-    src: "../../public/assets/fonts/base_neue/BaseNeueTrial-Regular.ttf",
-    display: "swap",
-});
+const geist = Geist({ subsets: ["latin"] });
 
 type Props = {}
 
@@ -42,14 +40,14 @@ const Footer = (props: Props) => {
                     {
                     `${neue_power_regular.className} 
                     text-[32px]/[32px] md:text-[56px]/[56px] tracking-[1.28px] md:tracking-[2.24px] text-center
-                    lg:text-start`
+                    lg:text-start text-white`
                     }
                 >
                     Ready to Make Your Vision Look This Good?
                 </h2>
                 <p className=
                     {
-                    `${base_neue.className} 
+                    `${geist.className} 
                     text-sm/[21px] tracking-[0.56px] md:text-lg/[27px] text-B200 md:tracking-[0.72px] 
                     text-center
                     lg:text-start 
@@ -58,12 +56,12 @@ const Footer = (props: Props) => {
                 >
                     Whether it’s a website, a pitch deck, or social media ads that actually convert, I’m here to make it happen. Let’s create something amazing together (because mediocre isn’t my thing).
                 </p>
-                <BtnWhiteArr content='Hire Me' />
+                <BtnWhiteArr content='Hire Me—You Won’t Regret It' />
             </div>
             <div className="
                 bg-B75 
-                h-[500px]  w-full
-                lg:w-1/2 lg:h-full
+                h-[300px] md:h-[500px] lg:h-[600px]  w-full
+                lg:w-1/2 
             "
             ></div>
         </div>
