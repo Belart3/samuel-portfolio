@@ -32,48 +32,44 @@ export default function Home() {
   return (
     <PageWrapper >
       <Navbar />
-      <header className="h-dvh md:max-h-[845px] relative flex flex-col items-center justify-between pt-8 mt-[100px]">
+      <header className="h-fit md:h-screen md:max-h-[1000px] max-w-screen-2xl mx-auto relative flex flex-col items-center">
           {/* fixed page fraction */}
-        <div className="flex items-center justify-center gap-1 w-fit absolute top-[170px] left-0">
+        <div className="flex items-center justify-center gap-1 w-fit absolute top-[12px] md:top-[56px] lg:top-[58px] left-0">
           <p className={`${geist.className} text-B200 text-base capitalize tracking-[0px]`}>
             01/04 - Scroll
           </p>
           <Image src="./assets/images/arrow-down-grey.svg" height={24} width={24} alt="arrow down"/>
         </div>
-        <div className="flex flex-col mx-0 md:mx-auto mb-6 w-full md:w-[90%]">
+        <div className="flex flex-col mx-0 md:mx-auto mb-6 md:mb-[26px] w-full md:w-[90%] mt-[52px] md:mt-[104px] lg:mt-[58px]">
           <motion.h2  // Start off-screen
             // animate={{ x: [0, 30], opacity: 1 }} // Slide in
             // transition={{ type: "spring", ease: "linear" , duration: 5 }}
-            className={`${neue_power_regular.className} text-[clamp(1rem,6vw,58px)]/[58px] lg:text-[clamp(1rem,6vw,96px)]/[100px] bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-end tracking-[3.84px] font-medium text-wrap`}>
+            className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px] lg:text-[clamp(1rem,6vw,96px)]/[100px] bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent tracking-[3.84px] font-medium text-wrap text-start md:text-end`}>
             Designing Interfaces
           </motion.h2>
           <motion.h2 
             // animate={{ x: [0, -5], opacity: 1 }}
             // transition={{ type: "spring", ease: "linear" , duration: 10 }}
-            className={`${neue_power_regular.className} text-[clamp(1rem,6vw,58px)]/[58px]  lg:text-[clamp(1rem,6vw,96px)]/[96px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-center tracking-[3.84px] font-medium`}>
+            className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px]  lg:text-[clamp(1rem,6vw,96px)]/[96px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-start md:text-center tracking-[3.84px] font-medium`}>
             That Make You Go,
           </motion.h2>
           <motion.h2 
           // animate={{ x: [0, -60], opacity: 1 }}
           // transition={{ type: "spring", ease: "linear" , duration: 10 }}
-          className={`${neue_power_regular.className} text-[clamp(1rem,6vw,58px)]/[58px]  lg:text-[clamp(1rem,6vw,96px)]/[96px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-start tracking-[3.84px] font-medium`}>
+          className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px]  lg:text-[clamp(1rem,6vw,96px)]/[96px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-start tracking-[3.84px] font-medium`}>
             “Wow! That Was Easy.”
           </motion.h2>
         </div>
-        <div className="w-full md:w-3/5 mx-auto">
+        <div className="w-full md:w-3/5 mx-auto md:mb-16">
           <p className={`${geist.className} text-B50 text-end text-lg/[27px] font-normal tracking-[0px]`}>
             Turn your wild ideas into pixel-perfect realities. Whether it’s SaaS platforms, Web3 apps, or a landing page that actually converts, I make sure your users stay happy (and your bounce rates stay low).
           </p>
         </div>
-        <motion.div 
-        initial={{ y: 0, opacity: 0 }} 
-        animate={{ y: 50, opacity: 1 }} // Slide in
-        transition={{ type: "spring", ease: "linear" , duration: 3, repeat: Infinity }}
-        className="hidden md:flex h-20 w-20 rounded-full border border-white left-1/2 items-center justify-center">
+        <div className="hidden md:flex size-20 rounded-full border border-white left-1/2 items-center justify-center min-h-20 min-w-20">
           <Image src="./assets/images/arrow-down-white.svg" height={28} width={28} alt="arrow down"/>
-        </motion.div>
+        </div>
       </header>
-      <main className="mt-[104px] border-t border-B400">
+      <main className="mt-[147px] md:mt-[104px] border-t border-B400">
         {/* section 02/04 */}
         <SectionWrapper className="" >
           <SectionTitle title="My Greatest Hits (No Auto-Tune Required)" fraction="02/04" />

@@ -17,7 +17,7 @@ function SectionTitle({fraction, title}: Props) {
         {fraction}
         </p>
       }
-      <p className={`${geist.className} text-B200 text-[12px]/[12px] tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize`}>
+      <p className={`${geist.className} text-B200 text-[12px]/[12px] tracking-[0.48px] md:tracking-[0.64px] md:text-base capitalize text-end`}>
           {title}
       </p>
     </div>

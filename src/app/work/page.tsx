@@ -49,10 +49,10 @@ const page = (props: Props) => {
                             ))
                         }
                     </div>
-                    <div className='flex flex-row flex-wrap gap-x-[1%] gap-y-6'>
+                    <div className='flex flex-row flex-wrap gap-x-[1%] gap-y-4'>
                         {
                             projects.map((project) => (
-                                <div className={`h-[288px] md:h-[336px] lg:h-[437px] bg-[${project.image}] border border-B400 w-full md:w-[49%] lg:w-[32%] bg-cover bg-no-repeat bg-center`} key={project.id} style={{backgroundImage: `url(${project.image})`}}></div>
+                                <div className={`h-[288px] md:h-[336px] lg:h-[437px] border border-B400 w-full md:w-[49%] lg:w-[32%] bg-cover bg-no-repeat bg-center bg-[#E6E6E6]`} key={project.id} style={{backgroundImage: `url(${project.image})`}}></div>
                             ))
                         }
                     </div>
