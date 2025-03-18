@@ -1,5 +1,4 @@
 "use client"
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import localFont from "next/font/local";
 import SectionTitle from "@/components/SectionTitle";
@@ -16,10 +15,10 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 // import required modules
 import { FreeMode } from 'swiper/modules';
-import Footer from "@/components/Footer";
 import PageWrapper from "@/components/PageWrapper";
 import BtnTransArr from "@/components/BtnTransArr";
 import { Geist } from "next/font/google";
+import Link from "next/link";
 
 const neue_power_regular = localFont({
     src: "../../public/assets/fonts/NeuePowerTrial/NeuePowerTrial-Regular.ttf",
@@ -31,7 +30,6 @@ export default function Home() {
   const [swiperActive, setSwipeActive] = useState(false);
   return (
     <PageWrapper >
-      <Navbar />
       <header className="h-fit md:h-screen md:max-h-[1000px] max-w-screen-2xl mx-auto relative flex flex-col items-center">
           {/* fixed page fraction */}
         <div className="flex items-center justify-center gap-1 w-fit absolute top-[12px] md:top-[56px] lg:top-[58px] left-0">
@@ -44,19 +42,19 @@ export default function Home() {
           <motion.h2  // Start off-screen
             // animate={{ x: [0, 30], opacity: 1 }} // Slide in
             // transition={{ type: "spring", ease: "linear" , duration: 5 }}
-            className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px] lg:text-[clamp(1rem,6vw,96px)]/[100px] bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent tracking-[3.84px] font-medium text-wrap text-start md:text-end`}>
+            className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px] lg:text-[clamp(1rem,6vw,120px)]/[150px] bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent tracking-[3.84px] font-medium text-wrap text-start md:text-end`}>
             Designing Interfaces
           </motion.h2>
           <motion.h2 
             // animate={{ x: [0, -5], opacity: 1 }}
             // transition={{ type: "spring", ease: "linear" , duration: 10 }}
-            className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px]  lg:text-[clamp(1rem,6vw,96px)]/[96px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-start md:text-center tracking-[3.84px] font-medium`}>
+            className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px]  lg:text-[clamp(1rem,6vw,120px)]/[120px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-start md:text-center tracking-[3.84px] font-medium`}>
             That Make You Go,
           </motion.h2>
           <motion.h2 
           // animate={{ x: [0, -60], opacity: 1 }}
           // transition={{ type: "spring", ease: "linear" , duration: 10 }}
-          className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px]  lg:text-[clamp(1rem,6vw,96px)]/[96px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-start tracking-[3.84px] font-medium`}>
+          className={`${neue_power_regular.className} text-[40px]/[40px] md:text-[56px]/[56px]  lg:text-[clamp(1rem,6vw,120px)]/[120px]  bg-clip-text bg-gradient-to-r from-black via-white to-black text-transparent text-start tracking-[3.84px] font-medium`}>
             “Wow! That Was Easy.”
           </motion.h2>
         </div>
@@ -103,7 +101,9 @@ export default function Home() {
                 <p className={`${geist.className} text-B50 text-start text-lg/[27px] font-normal tracking-[0px]`}>
                   Hi, I’m Samuel Belawu, a UI/UX designer crafting websites and designs that don’t just look good—they work. When I’m not designing, I’m either chasing wins in Apex, scoring goals in eFootball, lifting weights at the gym.
                 </p>
-                <BtnTransArr content="learn more about me"/>
+                <Link href="/about">
+                  <BtnTransArr content="learn more about me"/>
+                </Link>
               </div>
               <div className="bg-[url('/assets/images/my-image.png')] h-[450px] md:h-[900px] lg:h-full w-full lg:w-1/2 lg:max-w-[50%] bg-no-repeat bg-cover bg-center order-2 lg:order-3"></div>
               <div className="flex flex-row flex-wrap gap-x-[30px] gap-y-3 order-3 lg:order-2 w-full lg:w-1/2 self-end">
@@ -166,8 +166,6 @@ export default function Home() {
           </div>
         </SectionWrapper>
       </main>
-      {/* footer */}
-      <Footer />
     </PageWrapper>
   );
 }

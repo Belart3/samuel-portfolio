@@ -1,11 +1,10 @@
-import Navbar from '@/components/Navbar'
+"use client"
 import PageWrapper from '@/components/PageWrapper'
 import React from 'react'
 import localFont from 'next/font/local';
 import SectionTitle from '@/components/SectionTitle';
 import titles from "@/data/projectTitles.json"
 import skills from "@/data/skills.json"
-import Footer from '@/components/Footer';
 import SectionWrapper from '@/components/SectionWrapper';
 
 const neue_power = localFont({
@@ -16,11 +15,10 @@ const neue_power = localFont({
 const About = () => {
   return (
     <PageWrapper>
-      <Navbar />
       <header className='flex flex-col mb-[104px] gap-12 md:gap-16 mt-[100px]'>
         <SectionTitle fraction='03/04' title='about' />
         <div className="flex flex-col gap-8 md:gap-10">
-          <h1 className={`${neue_power.className} text-[32px]/[32px] tracking-[1.28px] font-medium text-white`}>
+          <h1 className={`${neue_power.className}  text-[32px]/[32px] md:text-[56px]/[56px] tracking-[1.28px] md:tracking-[2.24px] font-medium text-white`}>
             Having fun while <br/> impacting the world.
           </h1>
           <div className='bg-[#D9D9D9] h-[250px] md:h-[500px] lg:h-[700px] w-full'></div>
@@ -59,7 +57,6 @@ const About = () => {
           }
         </div>
       </SectionWrapper>
-      <Footer />
     </PageWrapper>
   )
 }

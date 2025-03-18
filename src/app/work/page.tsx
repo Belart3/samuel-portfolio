@@ -1,6 +1,4 @@
 "use client"
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import PageWrapper from '@/components/PageWrapper'
 import SectionTitle from '@/components/SectionTitle'
 import SectionWrapper from '@/components/SectionWrapper'
@@ -27,7 +25,6 @@ const page = (props: Props) => {
     const projects = filteredProjects(selectedCategory)
   return (
     <PageWrapper>
-        <Navbar />
         <main className='mt-[100px]'>
             <SectionWrapper >
                 <SectionTitle fraction={'02/04'} title={'work'} />
@@ -59,7 +56,6 @@ const page = (props: Props) => {
                 </div>
             </SectionWrapper>
         </main>
-        <Footer />
     </PageWrapper>
   )
 }
