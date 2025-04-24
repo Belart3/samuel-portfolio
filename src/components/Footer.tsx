@@ -5,7 +5,6 @@ import BtnWhiteArr from './BtnWhiteArr';
 import socialmedia from '@/data/socialMedia.json'
 import Image from 'next/image';
 import { Geist } from 'next/font/google';
-import { motion } from "framer-motion";
 import BtnTrans from './BtnTrans';
 
 const neue_power_regular = localFont({
@@ -19,57 +18,26 @@ type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <motion.footer className="
-        flex 
-        flex-col 
-        gap-10
-        lg:gap-16 lg:px-0
-        mb-16" 
-    >
-        <div className="
-            flex 
-            flex-col items-center gap-10 h-fit
-            lg:flex-row lg:gap-0 lg:px-0 lg:h-[600px]"
-        >
-            <div className="
-                flex gap-8 
-                flex-col justify-center items-center pe-0 w-full md:w-[80%]
-                lg:pe-20 lg:w-1/2 lg:items-start"
-            >
-                <h2 className=
-                    {
-                    `${neue_power_regular.className} 
-                    text-[32px]/[32px] md:text-[56px]/[56px] tracking-[1.28px] md:tracking-[2.24px] text-center
-                    lg:text-start text-white`
-                    }
-                >
+    <footer className="flex flex-col gap-8 lg:gap-10 lg:px-0 mb-16 mx-4 md:mx-7 lg:mx-10" >
+        <div className="flex justify-center items-center bg-black rounded-2xl w-full px-5 md:px-16 py-[120px] md:py-[75px] lg:py-16 overflow-hidden relative">
+            <div className="flex flex-col items-center justify-center max-w-[800px] gap-4 md:gap-6">
+                <p className={`${geist.className} text-[16px]/[24px] md:text-[18px]/[27px] font-normal text-[#B3B3B3] text-center`}>
+                    LET’S CONNECT!
+                </p>
+                <h2 className={`${neue_power_regular.className} text-[32px]/[32px] md:text-[56px]/[56px] text-white text-center mb-2`}>
                     Ready to Make Your Vision Look This Good?
                 </h2>
-                <p className=
-                    {
-                    `${geist.className} 
-                    text-sm/[21px] tracking-[0.56px] md:text-lg/[27px] text-B200 md:tracking-[0.72px] 
-                    text-center
-                    lg:text-start 
-                    `
-                    }
-                >
-                    Whether it’s a website, a pitch deck, or social media ads that actually convert, I’m here to make it happen. Let’s create something amazing together (because mediocre isn’t my thing).
-                </p>
                 <BtnWhiteArr content='Hire Me—You Won’t Regret It' />
             </div>
-            <div className="
-                bg-B75 
-                h-[300px] md:h-[500px] lg:h-[600px]  w-full
-                lg:w-1/2 
-            "
-            ></div>
+            {/* absolutely placed background elements */}
+            <div className="absolute -bottom-1/4 -left-[33%] md:-left-[30%] lg:-bottom-[66%] lg:-left-[15%] bg-[url('/assets/images/footer-bg-1.svg')] bg-contain bg-no-repeat bg-center size-[250px] md:size-[350px] lg:size-[450px] animate-[spin_10s_linear_infinite]"></div>
+            <div className="absolute -top-1/4 -right-[33%] md:-right-[30%] lg:-top-[66%] lg:-right-[15%] bg-[url('/assets/images/footer-bg-1.svg')] bg-contain bg-no-repeat bg-center md:size-[350px] size-[250px] lg:size-[450px] animate-[spin_10s_linear_infinite]"></div>
         </div>
         <div className="flex flex-col gap-y-8 md:flex-row items-center justify-between w-full">
             <div className='flex flex-row items-center   justify-center w-full md:w-fit'>
                 <BtnTrans content='Available for Work' />
             </div>
-            <div className="flex flex-row justify-center gap-20 items-center">
+            <div className="flex flex-row justify-between gap-20 items-center w-full max-w-[400px]">
             {
                 socialmedia.map((media) => (
                     <a href={media.url} key={media.id}>
@@ -79,7 +47,7 @@ const Footer = (props: Props) => {
             }
             </div>
         </div>
-    </motion.footer>
+    </footer>
   )
 }
 

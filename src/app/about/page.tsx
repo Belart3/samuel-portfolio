@@ -1,5 +1,4 @@
 "use client"
-import PageWrapper from '@/components/PageWrapper'
 import React from 'react'
 import localFont from 'next/font/local';
 import SectionTitle from '@/components/SectionTitle';
@@ -14,7 +13,7 @@ const neue_power = localFont({
 
 const About = () => {
   return (
-    <PageWrapper>
+    <>
       <header className='flex flex-col mb-[104px] gap-12 md:gap-16 mt-[100px]'>
         <SectionTitle fraction='03/04' title='about' />
         <div className="flex flex-col gap-8 md:gap-10">
@@ -57,7 +56,7 @@ const About = () => {
           }
         </div>
       </SectionWrapper>
-    </PageWrapper>
+    </>
   )
 }
 

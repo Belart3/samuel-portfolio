@@ -1,5 +1,4 @@
 "use client"
-import PageWrapper from '@/components/PageWrapper'
 import SectionTitle from '@/components/SectionTitle'
 import SectionWrapper from '@/components/SectionWrapper'
 import React, { useState } from 'react'
@@ -24,7 +23,7 @@ const page = (props: Props) => {
     }
     const projects = filteredProjects(selectedCategory)
   return (
-    <PageWrapper>
+    <>
         <main className='mt-[100px]'>
             <SectionWrapper >
                 <SectionTitle fraction={'02/04'} title={'work'} />
@@ -56,7 +55,7 @@ const page = (props: Props) => {
                 </div>
             </SectionWrapper>
         </main>
-    </PageWrapper>
+    </>
   )
 }
 
