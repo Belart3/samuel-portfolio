@@ -26,7 +26,7 @@ const page = (props: Props) => {
     <>
         <main className='mt-[100px]'>
             <SectionWrapper >
-                <SectionTitle fraction={'02/04'} title={'work'} />
+                <SectionTitle title={'work'} />
                 <h1 className={`${neue_power.className} text-[32px]/[32px] tracking-[1.28px] md:text-[56px]/[56px] md:tracking-[2.24px] font-medium text-white`}>
                     See What I’ve Been Up To <br /> (Besides Playing Apex).
                 </h1>
