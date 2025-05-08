@@ -12,7 +12,7 @@ type Props = {
 const BtnTrans = ({content}: Props) => {
   return (
     <button className={` ${geist.className} flex gap-2 items-center justify-center bg-transparent border border-B300 rounded-full px-5 py-[7px] md:py-5 capitalize text-[12px]/[18px] tracking-[0px] font-normal text-black w-max min-w-max`} >
-        <span className='size-2 rounded-full bg-[#33FF00]'></span>
+        <span className='size-2 rounded-full bg-[#33FF00] animate-pulse'></span>
         {content}
     </button>
   )

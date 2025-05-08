@@ -19,7 +19,7 @@ type Props = {}
 const Footer = (props: Props) => {
   return (
     <footer className="flex flex-col gap-8 lg:gap-10 lg:px-0 mb-16 mx-4 md:mx-7 lg:mx-10" >
-        <div className="flex justify-center items-center bg-black rounded-2xl w-full px-5 md:px-16 py-[120px] md:py-[75px] lg:py-16 overflow-hidden relative">
+        <div className="flex justify-center items-center bg-black rounded-2xl w-full px-5 md:px-16 py-[120px] md:py-[75px] lg:py-16 overflow-hidden relative shadow-lg shadow-[#0000006b]">
             <div className="flex flex-col items-center justify-center max-w-[800px] gap-4 md:gap-6">
                 <p className={`${geist.className} text-[16px]/[24px] md:text-[18px]/[27px] font-normal text-[#B3B3B3] text-center`}>
                     LET’S CONNECT!
@@ -30,8 +30,9 @@ const Footer = (props: Props) => {
                 <BtnWhiteArr content='Hire Me—You Won’t Regret It' />
             </div>
             {/* absolutely placed background elements */}
-            <div className="absolute -bottom-1/4 -left-[33%] md:-left-[30%] lg:-bottom-[66%] lg:-left-[15%] bg-[url('/assets/images/footer-bg-1.svg')] bg-contain bg-no-repeat bg-center size-[250px] md:size-[350px] lg:size-[450px] animate-[spin_10s_linear_infinite]"></div>
-            <div className="absolute -top-1/4 -right-[33%] md:-right-[30%] lg:-top-[66%] lg:-right-[15%] bg-[url('/assets/images/footer-bg-1.svg')] bg-contain bg-no-repeat bg-center md:size-[350px] size-[250px] lg:size-[450px] animate-[spin_10s_linear_infinite]"></div>
+            <div className="absolute -bottom-1/4 -left-[33%] sm:-left-[18%] md:-left-[25%] md:-bottom-[30%] lg:-bottom-[50%] lg:-left-[25%] xl:-bottom-[60%] xl:-left-[18%] 2xl:-bottom-[60%] 2xl:-left-[10%] bg-[url('/assets/images/footer-bg-1.svg')] bg-contain bg-no-repeat bg-center size-[250px] md:size-[350px] lg:size-[450px] animate-[spin_10s_linear_infinite]"></div>
+
+            <div className="absolute -top-1/4 -right-[33%] sm:-right-[18%] md:-right-[25%] md:-top-[30%] lg:-top-[60%] lg:-right-[20%] xl:-top-[60%] xl:-right-[18%] 2xl:-top-[60%] 2xl:-right-[10%] bg-[url('/assets/images/footer-bg-1.svg')] bg-contain bg-no-repeat bg-center md:size-[350px] size-[250px] lg:size-[450px] animate-[spin_10s_linear_infinite]"></div>
         </div>
         <div className="flex flex-col gap-y-8 md:flex-row items-center justify-between w-full">
             <div className='flex flex-row items-center   justify-center w-full md:w-fit'>

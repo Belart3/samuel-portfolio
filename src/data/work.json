@@ -2,71 +2,79 @@
     {
         "id": 1,
         "category": "social media ads",
-        "image": "/assets/images/ads/social-media-ad-1.png"
+        "title": "GIT Global",
+        "task": "Website Redesign, Social Media Ads Design"
     },
     {
         "id": 2,
         "category": "social media ads",
-        "image": "/assets/images/ads/social-media-ad-2.png"
+        "title": "BCM",
+        "task": "Website Redesign, Social Media Ads Design"
     },
     {
         "id": 3,
         "category": "social media ads",
-        "image": "/assets/images/ads/social-media-ad-3.png"
+        "title": "Elivate",
+        "task": "Social Media Ads Design"
     },
     {
         "id": 4,
         "category": "social media ads",
-        "image": "/assets/images/ads/social-media-ad-4.png"
+        "title": "Excel Daycare",
+        "task": "Social Media Ads Design"
     },
     {
         "id": 5,
-        "category": "social media ads",
-        "image": "/assets/images/ads/social-media-ad-5.png"
+        "category": "web designs",
+        "title": "GIT Global",
+        "task": "Website Redesign, Social Media Ads Design"
     },
     {
         "id": 6,
-        "category": "social media ads",
-        "image": "/assets/images/ads/social-media-ad-6.png"
+        "category": "web designs",
+        "title": "BCM",
+        "task": "Website Redesign, Social Media Ads Design"
     },
     {
         "id": 7,
         "category": "web designs",
-        "image": "/assets/images/ads/web-design-1.png"
+        "title": "JMG Handyman",
+        "task": "Website Design, UI/UX Design"
     },
     {
         "id": 8,
         "category": "web designs",
-        "image": "/assets/images/ads/web-design-2.png"
+        "title": "Fluence Mgt.",
+        "task": "Pitch Deck Design"
     },
     {
         "id": 9,
-        "category": "web designs",
-        "image": "/assets/images/ads/web-design-3.png"
+        "category": "pitch decks & white papers",
+        "title": "Fluence",
+        "task": "Pitch Deck Design"
     },
     {
         "id": 10,
-        "category": "web designs",
-        "image": "/assets/images/ads/web-design-4.png"
+        "category": "pitch decks & white papers",
+        "title": "LuncPump",
+        "task": "Pitch Deck Design"
     },
     {
         "id": 11,
-        "category": "pitch decks",
-        "image": "/assets/images/ads/pitch-decks-1.png"
+        "category": "pitch decks & white papers",
+        "title": "USFRAUD Coin",
+        "task": "White Paper Design"
     },
     {
         "id": 12,
-        "category": "pitch decks",
-        "image": "/assets/images/ads/pitch-decks-2.png"
+        "category": "pitch decks & white papers",
+        "title": "Deego Coin",
+        "task": "White Paper Design"
     },
     {
         "id": 13,
-        "category": "white papers",
-        "image": "/assets/images/ads/white-papers-1.png"
-    },
-    {
-        "id": 12,
-        "category": "white papers",
-        "image": "/assets/images/ads/white-papers-2.png"
+        "category": "pitch decks & white papers",
+        "title": "$LYCO",
+        "task": "White Paper Design"
     }
 ]

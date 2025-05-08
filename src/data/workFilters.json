@@ -1,22 +1,22 @@
 [
     {
         "id": 1,
-        "filter": "web designs",
+        "filter": "all",
         "url": ""
     },
     {
         "id": 2,
-        "filter": "social media ads",
+        "filter": "web designs",
         "url": ""
     },
     {
         "id": 3,
-        "filter": "pitch decks",
+        "filter": "social media ads",
         "url": ""
     },
     {
         "id": 4,
-        "filter": "white papers",
+        "filter": "pitch decks & white papers",
         "url": ""
     }
 ]

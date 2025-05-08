@@ -1,20 +1,23 @@
 "use client"
-import SectionTitle from '@/components/SectionTitle'
 import SectionWrapper from '@/components/SectionWrapper'
 import React, { useState } from 'react'
 import localFont from "next/font/local";
+import { Geist } from "next/font/google";
 import WorkFilters from '@/components/WorkFilters'
 import filters from '@/data/workFilters.json'
 import work from '@/data/work.json'
 
-const neue_power = localFont({
+const neue_power_trial = localFont({
     src: "../../../public/assets/fonts/NeuePowerTrial/NeuePowerTrial-Regular.ttf",
     display: "swap" ,
 });
 
-type Props = {}
+const geist = Geist({
+    subsets: ["latin"],
+    display: "swap",
+});
 
-const page = (props: Props) => {
+const page = () => {
     const [workFilter, setWorkFilter] =  useState("web designs")
     const [selectedCategory, setSelectedCategory] = useState("web designs")
     
@@ -26,12 +29,11 @@ const page = (props: Props) => {
     <>
         <main className='mt-[100px]'>
             <SectionWrapper >
-                <SectionTitle title={'work'} />
-                <h1 className={`${neue_power.className} text-[32px]/[32px] tracking-[1.28px] md:text-[56px]/[56px] md:tracking-[2.24px] font-medium text-white`}>
+                <h1 className={`${neue_power_trial.className} text-[32px]/[32px] tracking-[1.28px] md:text-[56px]/[56px] md:tracking-[2.24px] font-medium text-black`}>
                     See What I’ve Been Up To <br /> (Besides Playing Apex).
                 </h1>
                 <div className="flex flex-col gap-8 md:gap-10">
-                    <div className="flex flex-col md:flex-row gap-3 md:gap-4 lg:gap-6 w-full flex-wrap">
+                    <div className="flex flex-row gap-3 md:gap-4 lg:gap-6 w-full flex-wrap">
                         {
                             filters.map((filter) => (
                                 <WorkFilters 
@@ -45,10 +47,13 @@ const page = (props: Props) => {
                             ))
                         }
                     </div>
-                    <div className='flex flex-row flex-wrap gap-x-[1%] gap-y-4'>
+                    <div className='flex flex-col'>
                         {
                             projects.map((project) => (
-                                <div className={`h-[288px] md:h-[336px] lg:h-[437px] border border-B400 w-full md:w-[49%] lg:w-[32%] bg-cover bg-no-repeat bg-center bg-[#E6E6E6]`} key={project.id} style={{backgroundImage: `url(${project.image})`}}></div>
+                                <div className="py-10 px-4 md:py-16 md:px-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 md:gap-4 border-y border-[#E6E6E6] group" key={project.id}>
+                                    <h2 className={`${neue_power_trial.className} text-[32px]/[40px] tracking[1.28px] md:text-[44px]/[60px] font-medium tracking-[1.76px] text-start text-black transition-all ease-in-out duration-300 lg:group-hover:translate-x-[-6.25%] lg:group-hover:opacity-[50%]`}>{project.title}</h2>
+                                    <p className={`${geist.className} text-[16px]/[24px] md:text-[18px]/[27px] text-[#666666] font-normal transition-all ease-in-out duration-300 lg:group-hover:translate-x-[6.25%] lg:group-hover:opacity-[50%]`}>{project.task}</p>
+                                </div>
                             ))
                         }
                     </div>
