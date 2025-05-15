@@ -20,7 +20,7 @@ const neue_power_trial = localFont({
 const geist = Geist({ subsets: ["latin"] });
 
 export default function Home() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isInside, setIsInside] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePosition, setMousePosition] = useState({ 
@@ -38,7 +38,8 @@ export default function Home() {
   useEffect(() => {
     const container = containerRef.current;
     
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!container) return;
       const rect = container.getBoundingClientRect();
       setMousePosition({
         x: e.pageX - rect.left - window.scrollX,
@@ -46,9 +47,13 @@ export default function Home() {
       })
     };
 
-    container.addEventListener("mousemove", handleMouseMove);
+    if (container) {
+      container.addEventListener("mousemove", handleMouseMove);
+    }
     return () => {
-      container.removeEventListener("mousemove", handleMouseMove);
+      if (container) {
+        container.removeEventListener("mousemove", handleMouseMove);
+      }
     }
   }, []);
 
