@@ -1,14 +1,22 @@
 [
     {
+        "title": "Website Design",
+        "content": "For SaaS, Web3, Fintech, Real Estate, Portfolios, and more. Websites that look good and work hard."
+    },
+    {
+        "title": "Landing Page Design",
+        "content": "Landing pages built to convert, not just exist. Ideal for lead generation, product launches, or marketing campaigns."
+    },
+    {
+        "title": "Pitch Deck Design",
+        "content": "Present your big idea with slides that wow, persuade, and win investors over."
+    },
+    {
         "title": "UI/UX Design",
-        "content": "Crafting user-centric designs that balance aesthetics and usability. Perfect for SaaS platforms, fintech apps, Web3 products, Ecommerce and more."
+        "content": "User-first, conversion-focused design that solves problems and looks damn good doing it."
     },
     {
         "title": "Social Media Ads Design",
-        "content": "Creating impactful visuals for social media ads and campaigns that resonate with your audience."
-    },
-    {
-        "title": "Presentation Design",
-        "content": "Designing pitch decks, crypto whitepapers that leave a lasting impression on investors, stakeholders, and partners."
+        "content": "Ad creatives that grab attention, tell your story, and drive results across all platforms."
     }
 ]

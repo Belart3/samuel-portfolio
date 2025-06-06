@@ -1,0 +1,38 @@
+[
+    {
+        "project": "TrackMyTrades",
+        "url": "#",
+        "image": "/assets/images/designs/track-my-trades.png",
+        "scope": "design"
+    },
+    {
+        "project": "Esper Creations",
+        "url": "https://espercreations.com/",
+        "image": "/assets/images/designs/esper-creations.png",
+        "scope": "design"
+    },
+    {
+        "project": "GIT Global",
+        "url": "https://gitsiowa.com/",
+        "image": "/assets/images/designs/git-global.png",
+        "scope": "design"
+    },
+    {
+        "project": "BlockChain Management",
+        "url": "https://bcmanagement.us/",
+        "image": "/assets/images/designs/blockchain-management.png",
+        "scope": "design"
+    },
+    {
+        "project": "Fluence Management",
+        "url": "#",
+        "image": "/assets/images/designs/luncpump.png",
+        "scope": "white paper"
+    },
+    {
+        "project": "USFraud Coin",
+        "url": "#",
+        "image": "/assets/images/designs/us-fraud-coin.png",
+        "scope": "white paper"
+    }
+]

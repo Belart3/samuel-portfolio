@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import localFont from "next/font/local";
 import Link from 'next/link';
-import Hamburger from 'hamburger-react';
+import { Slant as Hamburger } from 'hamburger-react'
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geist = Geist({
@@ -24,49 +24,26 @@ const Navbar = () => {
     setMenu(!menu)
   }
   return (
-    <nav className='px-4 py-3 md:px-7 md:py-4 lg:py-4 lg:px-10 flex items-center justify-between w-full bg-transparent border-b border-[#E6E6E6]'>
-        <div className='flex items-center justify-center w-48 h-7'>
-          <Link href={'/'}>
-            <Image  src='./assets/images/logo.svg' width={100} height={50} alt='samuel belawu' className='w-full'/>
+    <nav className='px-4 py-3 md:px-7 md:py-4 lg:py-6 lg:px-10 absolute top-0 left-0 flex items-center justify-between w-full bg-transparent z-50'>
+        <div className='flex items-center justify-between w-full'>
+          <Link href={'/'} >
+            <p className={`${neue_power_bold.className} text-[16px]/[24px] md:text-[20px]/[30px] lg:text-[24px]/[36px] font-bold text-white uppercase tracking-[1.28px] md:tracking-[1.6px] lg:tracking-[1.92px]`}>
+              SAMUEL BELAWU
+            </p>
+          </Link>
+          <Link href={'/work'} className='hidden lg:flex'>
+            <p className={`${neue_power_bold.className} uppercase text-[24px]/[36px] font-bold text-white`}>work</p>
+          </Link>
+          <Link href={'/about'} className='hidden lg:flex'>
+            <p className={`${neue_power_bold.className} uppercase text-[24px]/[36px] font-bold text-white`}>about</p>
+          </Link>
+          <Link href={'/about'} className='hidden lg:flex'>
+            <p className={`${neue_power_bold.className} uppercase text-[24px]/[36px] font-bold text-white`}>contact</p>
           </Link>
         </div>
-        <div className="flex justify-center items-center gap-10">
-          <ul className='items-center justify-center gap-10 hidden md:flex'>
-              <Link href={'/work'}>
-                <li className={`${neue_power_bold.className} capitalize text-base/4 font-bold text-black`}>work</li>
-              </Link>
-              <Link href={'/about'}>
-                <li className={`${neue_power_bold.className} capitalize text-base/4 font-bold text-black`}>about</li>
-              </Link>
-          </ul>
-          <div className='hidden md:flex'>
-            <button className={` ${geist.className} p-5 flex gap-2 items-center justify-center bg-black rounded-[32px] uppercase text-[16px]/[16px] font-semibold text-white min-w-max tracking-[0.64px] relative group overflow-hidden z-10`}>
-                get in touch
-                <Image height={24} width={24} src='./assets/images/arrow-up-right-white.svg' alt='arrow-up'/>
-                <div className="absolute top-0 left-0 h-full w-0 rounded-[32px] bg-[] transition-all ease-linear group-hover:w-full ring-offset-0 -z-[2]"></div>
-            </button>
-          </div>
-        </div>
-        {/* mobile menu */}
-        <div className='flex flex-col relative md:hidden'>
-          <button className='flex md:hidden text-white cursor-pointer' onClick={toggleMenu}>
-            <Hamburger color="black" />
-          </button>
-          {
-            menu ? (
-              <div className='h-[100px] bg-[#B3B3B3] w-screen absolute -right-[20px] top-full flex md:hidden z-50 p-5'>
-                <ul className='gap-5 flex flex-col  md:hidden h-full w-full'>
-                  <Link href={'/work'}>
-                    <li className={`${neue_power_bold.className} capitalize text-base/4 font-bold text-[#B3B3B3]`}>work</li>
-                  </Link>
-                  <Link href={'/about'}>
-                    <li className={`${neue_power_bold.className} capitalize text-base/4 font-bold text-[#B3B3B3]`}>about</li>
-                  </Link>
-                </ul>
-              </div>
-            ) :  null
-          }
-        </div>
+        <button className='flex justify-center items-center rounded-full shrink-0 lg:hidden size-14 bg-black cursor-pointer' onClick={toggleMenu}>
+          <Hamburger color="white" />
+        </button>
     </nav>
   )
 }
