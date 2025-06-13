@@ -22,7 +22,7 @@ type props = {
 export default function AccordionComponent(props: props) {
   return (
     <>
-      <Accordion className='border-[#E6E6E6] !rounded-none !shadow-none border-0 !border-b !border-x-0 !m-0 !py-10 !px-4 md:!py-16 md:!px-10 [&_.Mui-expanded]:!m-0 [&_.MuiAccordionSummary-root]:p-0 [&_.MuiAccordionDetails-root]:p-0 !before:hidden'>
+      <Accordion className='border-[#E6E6E6] !rounded-none !shadow-none border-0 !border-b !border-x-0 !m-0 !py-10 md:first-of-type:!pt-0 [&_.Mui-expanded]:!m-0 [&_.MuiAccordionSummary-root]:p-0 [&_.MuiAccordionDetails-root]:p-0 !before:hidden'>
         <AccordionSummary
         //   expandIcon={<ExpandMoreIcon />}
           aria-controls={props.title}

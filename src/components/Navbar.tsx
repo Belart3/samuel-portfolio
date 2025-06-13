@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react'
-import Image from 'next/image'
 import localFont from "next/font/local";
 import Link from 'next/link';
 import { Slant as Hamburger } from 'hamburger-react'
@@ -31,13 +30,13 @@ const Navbar = () => {
               SAMUEL BELAWU
             </p>
           </Link>
-          <Link href={'/work'} className='hidden lg:flex'>
+          <Link href={'#work'} className='hidden lg:flex'>
             <p className={`${neue_power_bold.className} uppercase text-[24px]/[36px] font-bold text-white`}>work</p>
           </Link>
-          <Link href={'/about'} className='hidden lg:flex'>
+          <Link href={'#about'} className='hidden lg:flex'>
             <p className={`${neue_power_bold.className} uppercase text-[24px]/[36px] font-bold text-white`}>about</p>
           </Link>
-          <Link href={'/about'} className='hidden lg:flex'>
+          <Link href="https://calendly.com/ayobamisamuel732/discovery-call-with-samuel-belawu" target='_blank' className='hidden lg:flex'>
             <p className={`${neue_power_bold.className} uppercase text-[24px]/[36px] font-bold text-white`}>contact</p>
           </Link>
         </div>

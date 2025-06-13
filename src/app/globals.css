@@ -26,4 +26,8 @@
   display: none;  /* Safari and Chrome */
 }
 
+body{
+  scroll-behavior: smooth !important;
+}
+
 

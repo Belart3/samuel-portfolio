@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import localFont from 'next/font/local';
 import { Geist } from 'next/font/google';
 
 const geist = Geist({ subsets: ["latin"] });
