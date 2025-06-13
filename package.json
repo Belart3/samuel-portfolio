@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run copy-assets && next dev --turbopack",
-    "build": "npm run copy-assets && next build",
-    "copy-assets": "xcopy .\\node_modules\\@nutrient-sdk\\viewer\\dist\\ public\\nutrient-viewer\\ /E /I /Y",
+    "dev": "next dev --turbopack",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
