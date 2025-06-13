@@ -30,7 +30,7 @@ const neue_power_trial = localFont({
 
 const geist = Geist({ subsets: ["latin"] });
 
-export default function Home({instance}: { instance: any }) {
+export default function Home() {
   const containerRef = useRef(null);
 
   useEffect(() => {
