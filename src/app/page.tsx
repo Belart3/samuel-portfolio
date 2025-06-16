@@ -12,6 +12,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { IoEyeOutline } from "react-icons/io5";
 import designs from "@/data/designs.json";
 import CountUp from 'react-countup';
+import { useInView, motion, useScroll, useTransform, MotionValue, useSpring } from "framer-motion";
 
 // Extend the Window interface to include NutrientViewer
 declare global {
@@ -30,8 +31,56 @@ const neue_power_trial = localFont({
 
 const geist = Geist({ subsets: ["latin"] });
 
+
+
 export default function Home() {
   const containerRef = useRef(null);
+  const textFill = useRef<HTMLDivElement>(null);
+  const textFill2 = useRef<HTMLDivElement>(null);
+  const textFill3 = useRef<HTMLDivElement>(null);
+  const textFill4 = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: scrollYProgress } = useScroll({
+    target: textFill,
+    offset: ["start end", "end start"],
+  });
+  const { scrollYProgress: scrollYProgress2 } = useScroll({
+    target: textFill2,
+    offset: ["start end", "end start"],
+  });
+  const { scrollYProgress: scrollYProgress3 } = useScroll({
+    target: textFill3,
+    offset: ["start end", "end start"],
+  });
+  const { scrollYProgress: scrollYProgress4 } = useScroll({
+    target: textFill4,
+    offset: ["start end", "end start"],
+  });
+
+  const width = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
+  const width2 = useTransform(scrollYProgress2, [0, 1], ["100%", "0%"]);
+  const width3 = useTransform(scrollYProgress3, [0, 1], ["100%", "0%"]);
+  const width4 = useTransform(scrollYProgress4, [0, 1], ["100%", "0%"]);
+
+  const smoothWidth = useSpring(width, {
+    stiffness: 100,
+    damping: 30,
+    mass: 0.5,
+  });
+  const smoothWidth2 = useSpring(width2, {
+    stiffness: 100,
+    damping: 30,
+    mass: 0.5,
+  });
+  const smoothWidth3 = useSpring(width3, {
+    stiffness: 100,
+    damping: 30,
+    mass: 0.5,
+  });
+  const smoothWidth4 = useSpring(width4, {
+    stiffness: 100,
+    damping: 30,
+    mass: 0.5,
+  });
 
   useEffect(() => {
     const container = containerRef.current;
@@ -101,9 +150,16 @@ export default function Home() {
       <main className="flex flex-col gap-[104px] md:gap-[168px] mb-16 md:mb-[104px]  max-w-screen-2xl mx-auto">
         <section className="mx-4 md:mx-7 lg:mx-10 flex flex-col gap-12 md:gap-16 scroll-mt-[104px] scroll-smooth" id="work" >
           <div className="flex flex-col lg:flex-row items-start justify-between w-full">
-            <p className={`${geist.className} text-[20px]/[26px] md:text-[28px]/[36px] tracking-[0.8px] md:tracking-[1.12px] font-normal text-black w-full xl:w-[75%]`}>
-              Here’s where I let my work do the talking (because bragging isn’t my thing—okay, maybe a little). Go ahead, take a look—you might just find your next favorite designer.
-            </p>
+            <div className='relative w-fit'>
+              <p className={`${geist.className} text-[20px]/[26px] md:text-[28px]/[36px] tracking-[0.8px] md:tracking-[1.12px] font-normal text-black w-full xl:w-[75%]`}>
+                Here’s where I let my work do the talking (because bragging isn’t my thing—okay, maybe a little). Go ahead, take a look—you might just find your next favorite designer.
+              </p>
+              <motion.div 
+                className={`absolute top-0 right-0 h-full bg-[#ffffffbf]`} 
+                ref={textFill4} 
+                style={{ width: smoothWidth4 }}
+              />
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-y-16 md:gap-x-4 relative">
             {
@@ -215,12 +271,40 @@ export default function Home() {
           <SectionTitle title="Here’s What I Do (And Do Well)" />
           <div className="flex flex-col lg:flex-row items-start justify-between gap-12 md:gap-16 w-full">
             <div className="flex flex-col w-full lg:w-1/2 gap-6 md:gap-8">
-              <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-black text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
-                From pixel-perfect websites to high-converting pages, I make your brand impossible to ignore.
-              </p>
-              <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-black text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
-                Here’s what I bring to the table:
-              </p>
+              <div>
+                <div className='relative w-fit'>
+                  <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-black text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
+                    From pixel-perfect websites to high-converting pages, 
+                  </p>
+                  <motion.div 
+                    className={`absolute top-0 right-0 h-full bg-[#ffffffbf] rounded-s-full`} 
+                    ref={textFill} 
+                    style={{ width: smoothWidth }}
+                  />
+                </div>
+                <div className="relative w-fit">
+                  <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-[#000000] text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
+                    I make your brand impossible to ignore.
+                  </p>
+                  <motion.div 
+                    className={`absolute top-0 right-0 h-full bg-[#ffffffbf] rounded-s-full`} 
+                    ref={textFill2} 
+                    transition={{ duration: 1, ease: 'easeOut' }}
+                    style={{ width: smoothWidth2 }}
+                  />
+                </div>
+              </div>
+              <div className='relative w-fit'>
+                <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-[#000000] text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
+                  Here’s what I bring to the table:
+                </p>
+                <motion.div 
+                  className={`absolute top-0 right-0 h-full bg-[#ffffffbf] rounded-s-full`} 
+                  ref={textFill3} 
+                  transition={{ duration: 1, ease: 'easeOut' }}
+                  style={{ width: smoothWidth3 }}
+                />
+              </div>
             </div>
             <div className="flex flex-col w-full lg:w-1/2 transition-all ease-linear duration-300 h-fit">
               {
@@ -247,3 +331,5 @@ export default function Home() {
     </>
   );
 }
+
+
