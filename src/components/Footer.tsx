@@ -27,7 +27,9 @@ const Footer = (props: Props) => {
                 <h2 className={`${neue_power_regular.className} text-[32px]/[32px] md:text-[56px]/[56px] text-white text-center mb-2`}>
                     Ready to Make Your Vision Look This Good?
                 </h2>
-                <BtnWhiteArr content='Hire Me—You Won’t Regret It' />
+                <a href="https://calendly.com/ayobamisamuel732/discovery-call-with-samuel-belawu" target='_blank' className='w-full md:w-fit'>
+                    <BtnWhiteArr content='Hire Me—You Won’t Regret It' />
+                </a>
             </div>
             {/* absolutely placed background elements */}
             <div className="absolute -bottom-1/4 -left-[33%] sm:-left-[18%] md:-left-[25%] md:-bottom-[30%] lg:-bottom-[50%] lg:-left-[25%] xl:-bottom-[60%] xl:-left-[18%] 2xl:-bottom-[60%] 2xl:-left-[10%] bg-[url('/assets/images/footer-bg-1.svg')] bg-contain bg-no-repeat bg-center size-[250px] md:size-[350px] lg:size-[450px] animate-[spin_10s_linear_infinite]"></div>
