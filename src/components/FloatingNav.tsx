@@ -40,7 +40,7 @@ const FloatingNav = () => {
             <Hamburger toggled={open} toggle={setOpen} />
           </button>
         </div>
-        <div className={`w-full h-screen fixed right-0 top-0 bg-white flex items-center justify-center z-[10] ${open ? 'translate-x-0' : 'translate-x-[100%]'} transition-all ease-linear duration-300`}>
+        <div className={`w-full h-screen fixed right-0 top-0 flex items-center justify-center z-[10] ${open ? 'translate-x-0' : 'translate-x-[100%]'} transition-all ease-linear duration-300`}>
             <div className={`w-full sm:w-3/5 lg:w-2/5 h-full bg-black fixed top-0 right-0 ps-10 pe-5 py-5 md:p-10 lg:p-14`}>
               <div className="flex flex-col justify-between h-full w-full pt-[120px]">
                 <div className="flex flex-col">
@@ -73,8 +73,8 @@ const FloatingNav = () => {
                 </div>
                 <div className="flex flex-row justify-between gap-20 items-center w-full">
                   {
-                    socialmedia.map((media) => (
-                        <a href={media.url} key={media.id}>
+                    socialmedia.map((media, index) => (
+                        <a href={media.url} key={index} target='_blank' className='flex items-center justify-center'>
                             <Image src={media.image} alt={media.media} height={32} width={32} className='filter invert' />
                         </a>
                     ))

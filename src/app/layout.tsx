@@ -12,20 +12,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          src="/nutrient-viewer/nutrient-viewer.js"
-          strategy="beforeInteractive"
-        />
-      </head>
       <body
         className={`antialiased overflow-x-hidden hide-scrollbar scroll-smooth`}
       >
       <div className="relative">
-        <FloatingNav />
         <Navbar />
         {children}
         <Footer />
+        <FloatingNav />
       </div>
       </body>
     </html>

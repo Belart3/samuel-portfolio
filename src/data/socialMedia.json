@@ -1,26 +1,22 @@
 [
     {
-        "id": 1,
         "media": "Instagram",
-        "url": "",
+        "url": "https://www.instagram.com/uiuxbelawu/",
         "image": "/assets/images/instagram.svg"
     },
     {
-        "id": 2,
         "media": "X",
-        "url": "",
+        "url": "https://x.com/uiuxbelawu",
         "image": "/assets/images/X.svg"
     },
     {
-        "id": 3,
         "media": "LinkedIn",
-        "url": "",
+        "url": "https://www.linkedin.com/in/samuelbelawu",
         "image": "/assets/images/linkedin.svg"
     },
     {
-        "id": 4,
         "media": "Behance",
-        "url": "",
+        "url": "https://www.behance.net/samuelbelawu",
         "image": "/assets/images/behance.svg"
     }
 ]

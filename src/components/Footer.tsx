@@ -40,8 +40,8 @@ const Footer = (props: Props) => {
             </div>
             <div className="flex flex-row justify-between gap-20 items-center w-full max-w-[400px]">
             {
-                socialmedia.map((media) => (
-                    <a href={media.url} key={media.id}>
+                socialmedia.map((media, index) => (
+                    <a href={media.url} key={index} target='_blank'>
                         <Image src={media.image} alt={media.media} height={32} width={32} />
                     </a>
                 ))
