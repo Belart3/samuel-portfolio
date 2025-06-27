@@ -136,7 +136,7 @@ export default function Home() {
     <>
       <header className="h-screen xl:max-h-none !pt-0 p-4 md:p-7 lg:p-10 w-full flex flex-col justify-end items-start bg-[#B3B3B3] bg-cover sm:bg-contain bg-[position:60%_100px] sm:bg-bottom bg-no-repeat mb-16 md:mb-[104px] bg-[url('/assets/images/hero-image.png')] relative" id="#">
         <HeaderTextMarquee />
-        <p className={`${geist.className} absolute top-[125] md:top-[300px] lg:top-1/2 text-white w-[120px] md:w-[180px] lg:w-[450px] text-end right-[16px] md:right-[28px] lg:right-10 text-[20px]/[26px] md:text-[28px]/[36px] font-normal tracking-[0px]`}>
+        <p className={`${geist.className} absolute top-[125px] md:top-[300px] lg:top-1/2 text-white w-[120px] md:w-[180px] lg:w-[450px] text-end right-[16px] md:right-[28px] lg:right-10 text-[20px]/[26px] md:text-[28px]/[36px] font-normal tracking-[0px]`}>
           Transform your bold ideas into flawless designs.
         </p>
         <div className="absolute flex flex-col justify-center items-start left-[16px] md:left-[28px] lg:left-10 top-1/2 md:top-[300px] lg:top-1/2 -translate-y-1/4 md:translate-y-0">
