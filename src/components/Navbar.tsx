@@ -15,15 +15,15 @@ const neue_power_bold = localFont({
     display: "swap",
 });
 
+type Props = {
+  open: boolean,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>,
+  handleToggle: () => void
+}
 
-
-const Navbar = () => {
-  const [menu, setMenu] = useState(false)
-  const toggleMenu = () => {
-    setMenu(!menu)
-  }
+const Navbar = (props: Props) => {
   return (
-    <nav className='px-4 py-3 md:px-7 md:py-4 lg:py-6 lg:px-10 absolute top-0 left-0 flex items-center justify-between w-full bg-transparent z-50'>
+    <nav className='px-4 py-3 md:px-7 md:py-4 lg:py-6 lg:px-10 absolute top-0 left-0 flex items-center justify-between w-full bg-transparent z-10'>
         <div className='flex items-center justify-between w-full'>
           <Link href={'/'} >
             <p className={`${neue_power_bold.className} text-[16px]/[24px] md:text-[20px]/[30px] lg:text-[24px]/[36px] font-bold text-white uppercase tracking-[1.28px] md:tracking-[1.6px] lg:tracking-[1.92px]`}>
@@ -40,8 +40,8 @@ const Navbar = () => {
             <p className={`${neue_power_bold.className} uppercase text-[24px]/[36px] font-bold text-white`}>contact</p>
           </Link>
         </div>
-        <button className='flex justify-center items-center rounded-full shrink-0 lg:hidden size-14 bg-black cursor-pointer' onClick={toggleMenu}>
-          <Hamburger color="white" />
+        <button className={`flex justify-center items-center rounded-full shrink-0 lg:hidden size-14 bg-black cursor-pointer`} onClick={props.handleToggle}>
+          <Hamburger color="white" toggled={props.open} toggle={props.setOpen} />
         </button>
     </nav>
   )

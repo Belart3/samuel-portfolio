@@ -6,13 +6,11 @@ import React, { useRef, useState, useEffect } from 'react';
 import services from "@/data/skills.json";
 import AccordionComponent from "@/components/AccordionComponent";
 import { Geist } from "next/font/google";
-import Link from "next/link";
 import HeaderTextMarquee from "@/components/HeaderTextMarquee";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoEyeOutline } from "react-icons/io5";
 import designs from "@/data/designs.json";
 import CountUp from 'react-countup';
-import { useInView, motion, useScroll, useTransform, MotionValue, useSpring } from "framer-motion";
 
 // Extend the Window interface to include NutrientViewer
 declare global {
@@ -34,73 +32,6 @@ const geist = Geist({ subsets: ["latin"] });
 
 
 export default function Home() {
-  const containerRef = useRef(null);
-  const textFill = useRef<HTMLDivElement>(null);
-  const textFill2 = useRef<HTMLDivElement>(null);
-  const textFill3 = useRef<HTMLDivElement>(null);
-  const textFill4 = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: scrollYProgress } = useScroll({
-    target: textFill,
-    offset: ["start end", "end start"],
-  });
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    target: textFill2,
-    offset: ["start end", "end start"],
-  });
-  const { scrollYProgress: scrollYProgress3 } = useScroll({
-    target: textFill3,
-    offset: ["start end", "end start"],
-  });
-  const { scrollYProgress: scrollYProgress4 } = useScroll({
-    target: textFill4,
-    offset: ["start end", "end start"],
-  });
-
-  const width = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
-  const width2 = useTransform(scrollYProgress2, [0, 1], ["100%", "0%"]);
-  const width3 = useTransform(scrollYProgress3, [0, 1], ["100%", "0%"]);
-  const width4 = useTransform(scrollYProgress4, [0, 1], ["100%", "0%"]);
-
-  const smoothWidth = useSpring(width, {
-    stiffness: 100,
-    damping: 30,
-    mass: 0.5,
-  });
-  const smoothWidth2 = useSpring(width2, {
-    stiffness: 100,
-    damping: 30,
-    mass: 0.5,
-  });
-  const smoothWidth3 = useSpring(width3, {
-    stiffness: 100,
-    damping: 30,
-    mass: 0.5,
-  });
-  const smoothWidth4 = useSpring(width4, {
-    stiffness: 100,
-    damping: 30,
-    mass: 0.5,
-  });
-
-  useEffect(() => {
-    const container = containerRef.current;
-
-    const { NutrientViewer } = window;
-    if (container && NutrientViewer) {
-      NutrientViewer.load({
-        container,
-        // You can specify a file in public directory, for example /document.pdf
-        document: "/document.pdf",
-      });
-    }
-
-    return () => {
-      if (container && NutrientViewer) {
-        NutrientViewer.unload(container);
-      }
-    };
-  }, []);
-
   const workImages = [
     "/assets/images/git-global-work-image.png",
     "/assets/images/bcm-work-image.png",
@@ -136,10 +67,10 @@ export default function Home() {
     <>
       <header className="h-screen xl:max-h-none !pt-0 p-4 md:p-7 lg:p-10 w-full flex flex-col justify-end items-start bg-[#B3B3B3] bg-cover sm:bg-contain bg-[position:60%_100px] sm:bg-bottom bg-no-repeat mb-16 md:mb-[104px] bg-[url('/assets/images/hero-image.png')] relative" id="#">
         <HeaderTextMarquee />
-        <p className={`${geist.className} absolute top-[125px] md:top-[300px] lg:top-1/2 text-white w-[120px] md:w-[180px] lg:w-[450px] text-end right-[16px] md:right-[28px] lg:right-10 text-[20px]/[26px] md:text-[28px]/[36px] font-normal tracking-[0px]`}>
+        <p className={`${geist.className} absolute top-[125px] md:top-[300px] lg:top-1/2 text-white w-[45%] md:w-[180px] lg:w-[450px] text-end right-[16px] md:right-[28px] lg:right-10 text-[20px]/[26px] md:text-[28px]/[36px] font-normal tracking-[0px]`}>
           Transform your bold ideas into flawless designs.
         </p>
-        <div className="absolute flex flex-col justify-center items-start left-[16px] md:left-[28px] lg:left-10 top-1/2 md:top-[300px] lg:top-1/2 -translate-y-1/4 md:translate-y-0">
+        <div className="absolute flex flex-col justify-center items-start left-[16px] md:left-[28px] lg:left-10 top-1/2 md:top-[300px] lg:top-1/2 -translate-y-full md:translate-y-0">
           <Image src="/assets/images/globe.svg" alt="hero image" width={32} height={32} className="size-8 md:size-10"/>
           <p className={`${geist.className} top-[60px] text-white text-start text-[20px]/[26px] md:text-[28px]/[36px] font-normal tracking-[0px]`}>
             Freelance <br />
@@ -150,23 +81,16 @@ export default function Home() {
       <main className="flex flex-col gap-[104px] md:gap-[168px] mb-16 md:mb-[104px]  max-w-screen-2xl mx-auto">
         <section className="mx-4 md:mx-7 lg:mx-10 flex flex-col gap-12 md:gap-16 scroll-mt-[104px] scroll-smooth" id="work" >
           <div className="flex flex-col lg:flex-row items-start justify-between w-full">
-            <div className='relative w-fit'>
-              <p className={`${geist.className} text-[20px]/[26px] md:text-[28px]/[36px] tracking-[0.8px] md:tracking-[1.12px] font-normal text-black w-full xl:w-[75%]`}>
-                Here’s where I let my work do the talking (because bragging isn’t my thing—okay, maybe a little). Go ahead, take a look—you might just find your next favorite designer.
-              </p>
-              <motion.div 
-                className={`absolute top-0 right-0 h-full bg-[#ffffffbf]`} 
-                ref={textFill4} 
-                style={{ width: smoothWidth4 }}
-              />
-            </div>
+            <p className={`${geist.className} text-[20px]/[26px] md:text-[28px]/[36px] tracking-[0.8px] md:tracking-[1.12px] font-normal text-black w-full xl:w-[75%]`}>
+              Here’s where I let my work do the talking (because bragging isn’t my thing—okay, maybe a little). Go ahead, take a look—you might just find your next favorite designer.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-y-16 md:gap-x-4 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-16 sm:gap-x-4 relative">
             {
               designs.map((design, index) => (
-                <a href={design.url} key={index} className="group">
+                <a href={design.url} target="_blank" key={index} className="group">
                   <div className="flex flex-col gap-3 !cursor-pointer" key={index}>
-                    <div className="relative overflow-hidden h-[300px] sm:h-[400px] w-full bg-contain bg-[#C8C8C8]">
+                    <div className="relative overflow-hidden h-[350px] md:h-[380px] w-full bg-contain bg-[#C8C8C8]">
                       <Image src={design.image} alt="Designs for clients who have trusted me with their project design" fill className={`${design.status !== 'live' ? 'group-hover:scale-0' : ''}lg:group-hover:scale-125 transition-all ease-linear duration-300`} />
                     </div>
                     <div className="flex items-center justify-between 2xl:h-[10%]">
@@ -175,16 +99,14 @@ export default function Home() {
                       </p>
                       {
                         design.scope === "design" && design.status === 'live' ? 
-                        <a href={design.url}>
-                          <button className="lg:opacity-0 lg:group-hover:opacity-100 transition-all ease-linear duration-300 flex items-center justify-center gap-2">
-                            <p className={`${geist.className} text-[16px]/[16px] md:text-[20px]/[20px] tracking-[-0.64px] md:tracking-[0.8px] font-medium text-black capitalize`}>
-                              Visit Site
-                            </p>
-                            <span>
-                              <GoArrowUpRight className="text-black size-6 font-medium" /> 
-                            </span>
-                          </button>
-                        </a> 
+                        <button className="lg:opacity-0 lg:group-hover:opacity-100 transition-all ease-linear duration-300 flex items-center justify-center gap-2">
+                          <p className={`${geist.className} text-[16px]/[16px] md:text-[20px]/[20px] tracking-[-0.64px] md:tracking-[0.8px] font-medium text-black capitalize`}>
+                            Visit Site
+                          </p>
+                          <span>
+                            <GoArrowUpRight className="text-black size-6 font-medium" /> 
+                          </span>
+                        </button>
                         : 
                         design.scope === "white paper" ? 
                           <button className="lg:opacity-0 lg:group-hover:opacity-100 transition-all ease-linear duration-300 flex items-center justify-center gap-2">
@@ -272,38 +194,17 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-start justify-between gap-12 md:gap-16 w-full">
             <div className="flex flex-col w-full lg:w-1/2 gap-6 md:gap-8">
               <div>
-                <div className='relative w-fit'>
-                  <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-black text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
-                    From pixel-perfect websites to high-converting pages, 
-                  </p>
-                  <motion.div 
-                    className={`absolute top-0 right-0 h-full bg-[#ffffffbf] rounded-s-full`} 
-                    ref={textFill} 
-                    style={{ width: smoothWidth }}
-                  />
-                </div>
-                <div className="relative w-fit">
-                  <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-[#000000] text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
-                    I make your brand impossible to ignore.
-                  </p>
-                  <motion.div 
-                    className={`absolute top-0 right-0 h-full bg-[#ffffffbf] rounded-s-full`} 
-                    ref={textFill2} 
-                    transition={{ duration: 1, ease: 'easeOut' }}
-                    style={{ width: smoothWidth2 }}
-                  />
-                </div>
+                <p className={`${geist.className} text-[20px]/[26px] tracking-[-0.8px] text-black text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
+                  From pixel-perfect websites to high-converting pages, 
+                </p>
+                <p className={`${geist.className} text-[20px]/[26px] tracking-[-0.8px] text-[#000000] text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
+                  I make your brand impossible to ignore.
+                </p>
               </div>
               <div className='relative w-fit'>
-                <p className={`${geist.className} teext-[20px]/[26px] tracking-[-0.8px] text-[#000000] text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
+                <p className={`${geist.className} text-[20px]/[26px] tracking-[-0.8px] text-[#000000] text-start font-normal md:text-[28px]/[36px] md:tracking-[-1.12px]`}>
                   Here’s what I bring to the table:
                 </p>
-                <motion.div 
-                  className={`absolute top-0 right-0 h-full bg-[#ffffffbf] rounded-s-full`} 
-                  ref={textFill3} 
-                  transition={{ duration: 1, ease: 'easeOut' }}
-                  style={{ width: smoothWidth3 }}
-                />
               </div>
             </div>
             <div className="flex flex-col w-full lg:w-1/2 transition-all ease-linear duration-300 h-fit">
