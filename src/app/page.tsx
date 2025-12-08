@@ -12,6 +12,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import designs from "@/data/designs.json";
 import CountUp from 'react-countup';
 
+
 // Extend the Window interface to include NutrientViewer
 declare global {
   interface Window {
@@ -29,9 +30,8 @@ const neue_power_trial = localFont({
 
 const geist = Geist({ subsets: ["latin"] });
 
-
-
 export default function Home() {
+
   const workImages = [
     "/assets/images/git-global-work-image.png",
     "/assets/images/bcm-work-image.png",
@@ -78,7 +78,7 @@ export default function Home() {
           </p>
         </div>
       </header>
-      <main className="flex flex-col gap-[104px] md:gap-[168px] mb-16 md:mb-[104px]  max-w-screen-2xl mx-auto">
+      <main className="flex flex-col gap-[104px] md:gap-[168px] mb-16 md:mb-[104px]  max-w-screen-2xl mx-auto" >
         <section className="mx-4 md:mx-7 lg:mx-10 flex flex-col gap-12 md:gap-16 scroll-mt-[104px] scroll-smooth" id="work" >
           <div className="flex flex-col lg:flex-row items-start justify-between w-full">
             <p className={`${geist.className} text-[20px]/[26px] md:text-[28px]/[36px] tracking-[0.8px] md:tracking-[1.12px] font-normal text-black w-full xl:w-[75%]`}>
